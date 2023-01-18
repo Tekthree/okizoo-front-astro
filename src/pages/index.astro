@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Showcase from '../components/Showcase.astro';
+const response = await fetch(
+  'http://jsonplaceholder.typicode.com/users?_limit=10'
+);
+const users = await response.json();
+const visible = true;
+---
+
+<Layout title='Hello'>
+  <Showcase showExtra={true} />
+  <h1>Hello world</h1>
+</Layout>
